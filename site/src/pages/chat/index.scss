@@ -1,0 +1,210 @@
+.chat-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    background-color: #583BBF;
+
+    * {
+        //border: 1px solid green;
+    }
+
+
+    .nav-bar {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 30px 50px;
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            font-size: 1.4em;
+            font-family: 'bold';
+        }
+
+        img {
+            border-right: 6px solid #DAA632;
+
+            padding-right: 30px;
+        }
+
+        label {
+            font-size: 1.5em;
+            color: white;
+        }
+    }
+
+    .chat-container {
+        width: 90%;
+        height: 65vh;
+
+        display: flex;
+        border-radius: 15px;
+
+        .left-side {
+            width: 25%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            padding: 30px;
+
+            border-radius: 15px 0px 0px 15px;
+
+            background-color: #DAA632;
+
+            .inputs {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                gap: 10px;
+
+                .input {
+                    width: 100%;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                        outline: none;
+                        border: none;
+
+                        padding-left: 2px;
+
+                        font-size: 1.1em;
+                    }
+
+                    label {
+                        width: 40%;
+
+                        font-size: 1.4em;
+                        font-family: 'bold';
+                        color: white;
+
+                    }
+                }
+
+                .btns {
+
+                    display: flex;
+                    justify-content: flex-end;
+
+                    gap: 10px;
+
+                    div {
+                        border-radius: 20px;
+
+                        padding: 6px 30px;
+
+                        color: white;
+                        font-family: 'bold';
+                        cursor: pointer;
+
+                        background-color: #BF8B17;
+                    }
+                }
+
+            }
+
+            .messages {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 15px;
+
+
+                & div:first-child {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    font-size: 1.4em;
+                    font-family: 'bold';
+                    color: white;
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 180px;
+                    resize: none;
+
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    
+                }
+
+                .btn {
+                    border-radius: 20px;
+
+                    padding: 6px 30px;
+
+                    color: white;
+                    font-family: 'bold';
+                    cursor: pointer;
+
+                    background-color: #BF8B17;
+                }
+            }
+        }
+
+        .right-side{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            padding: 35px;
+
+            background-color: #4A4A41;
+
+            .messages-container{
+                width: 100%;
+                height: 100vh;
+                
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                overflow-y: scroll;
+                position: relative;
+                
+                .not-found{
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    label{
+                        font-size: 1.5em;
+                        font-family: 'bold';
+                        color: white;
+                        
+                    }
+                }
+
+                .msg{
+                    font-family: 'regular';
+                    color: white;
+
+                    span{
+                        font-family: 'bold';
+                    }
+                }
+            }
+        }
+    }
+}
